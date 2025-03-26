@@ -74,13 +74,9 @@ The system operates in three modes:
 
 ### Test Case Generation (Python LLM Script)
 
-1. Install required dependencies:
-   ```sh
-   pip install -r requirements.txt  
-   ```
-2. Run the test case generator:
-   Run the jupyter notebook _SourceControlAndTestGenerationModel_Final.ipynb
-   And input the task `GENERATE_TESTS` or `UPDATE_TESTS`
+Run the test case generator: \\
+Run the jupyter notebook _SourceControlAndTestGenerationModel_Final.ipynb \\
+And input the task `GENERATE_TESTS` or `UPDATE_TESTS`
 
 ## Contributing
 
