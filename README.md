@@ -2,6 +2,9 @@
 
 This project automates **Cucumber test case generation** for a **Java Spring Boot-based banking application** with a **React frontend**. It utilizes a Python script powered by an **LLM (Large Language Model)** to analyze application functionality and generate **Gherkin** test cases dynamically.
 
+## Demo
+![Demo](./artifacts/demo/GenerateTests.mp4)
+
 ## Features
 
 - **Automated Test Case Generation**
