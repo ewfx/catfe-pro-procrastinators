@@ -1,0 +1,63 @@
+{
+  "functionalities": [
+    {
+      "name": "Account Management",
+      "description": "Handles the creation, retrieval, and management of bank accounts.",
+      "files": [
+        "AccountController.java",
+        "Account.java",
+        "AccountRepository.java"
+      ],
+      "primary_files": [
+        "AccountController.java"
+      ],
+      "supporting_files": [
+        "Account.java",
+        "AccountRepository.java"
+      ],
+      "category": "core",
+      "complexity": "medium",
+      "test_priority": "high"
+    },
+    {
+      "name": "Transaction Management",
+      "description": "Manages various financial transactions including transfers, deposits, withdrawals, and transaction history retrieval.",
+      "files": [
+        "TransferController.java",
+        "Transaction.java",
+        "TransactionType.java",
+        "TransactionRepository.java",
+        "FraudService.java"
+      ],
+      "primary_files": [
+        "TransferController.java"
+      ],
+      "supporting_files": [
+        "Transaction.java",
+        "TransactionType.java",
+        "TransactionRepository.java",
+        "FraudService.java"
+      ],
+      "category": "core",
+      "complexity": "high",
+      "test_priority": "high"
+    },
+    {
+      "name": "Fraud Detection",
+      "description": "Checks for potentially fraudulent transactions based on predefined thresholds.",
+      "files": [
+        "FraudService.java",
+        "Transaction.java"
+      ],
+      "primary_files": [
+        "FraudService.java"
+      ],
+      "supporting_files": [
+        "Transaction.java"
+      ],
+      "category": "security",
+      "complexity": "low",
+      "test_priority": "high"
+    }
+  ]
+}
