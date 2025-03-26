@@ -47,6 +47,11 @@ The system operates in three modes:
 #### 4. Other
 - **Invalid Task Type** â€“ Handles incorrect requests.
 
+## Flow
+![WhatsApp Image 2025-03-26 at 21 26 49_8396e3d5](https://github.com/user-attachments/assets/ef6355c6-f7b9-4632-8498-d1d950e1d34d)
+![WhatsApp Image 2025-03-26 at 21 26 49_c903b20d](https://github.com/user-attachments/assets/b90efc3a-b14b-4375-8395-2356e6ef8337)
+
+
 ## Setup & Usage
 
 ### Backend (Spring Boot)
