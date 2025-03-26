@@ -1,60 +1,88 @@
-# 🚀 Project Name
+# Context-Aware Test Case Generation
 
-## 📌 Table of Contents
-- [Introduction](#introduction)
-- [Demo](#demo)
-- [Inspiration](#inspiration)
-- [What It Does](#what-it-does)
-- [How We Built It](#how-we-built-it)
-- [Challenges We Faced](#challenges-we-faced)
-- [How to Run](#how-to-run)
-- [Tech Stack](#tech-stack)
-- [Team](#team)
+This project automates **Cucumber test case generation** for a **Java Spring Boot-based banking application** with a **React frontend**. It utilizes a Python script powered by an **LLM (Large Language Model)** to analyze application functionality and generate **Gherkin** test cases dynamically.
 
----
+## Features
 
-## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+- **Automated Test Case Generation**
+- **Context-Aware Test Updates**
+- **Supports Cucumber & Gherkin Format**
+- **REST API for Test Generation**
 
-## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
-🖼️ Screenshots:
+## Project Overview
 
-![Screenshot 1](link-to-image)
+### Banking Application Functionalities
 
-## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+The banking system includes:
 
-## ⚙️ What It Does
-Explain the key features and functionalities of your project.
+- **Account Management:** Create account
+- **Transactions:** Deposit, Withdraw, Money Transfer
+- **Balance Inquiry:** Check balance
 
-## 🛠️ How We Built It
-Briefly outline the technologies, frameworks, and tools used in development.
+### Test Case Generation Workflow
 
-## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+The system operates in three modes:
 
-## 🏃 How to Run
-1. Clone the repository  
+#### 1. Get Task Input & Check Type
+- Determines whether the request is for **test generation** or **test update**.
+
+#### 2. Generate Tests
+1. **Generate Code Context** â€“ Extracts relevant functionality from source code.
+2. **Parse Context Files** â€“ Reads application structure.
+3. **Create Functionality Map** â€“ Maps functionalities to potential test scenarios.
+4. **Generate Test Cases** â€“ Creates Cucumber-compatible test cases.
+5. **Generate Test Summary** â€“ Provides an overview of generated tests.
+
+#### 3. Update Tests
+1. **Generate Code Context** â€“ Re-extracts the latest application functionality.
+2. **Update Context with Existing Test Case Context** â€“ Merges new updates with previous test cases.
+3. **Create Functionality Map** â€“ Updates mapping for feature changes.
+4. **Find Updated Functionalities** â€“ Detects new, modified, or deprecated functionalities.
+5. **Update Test Cases** â€“ Modifies test cases accordingly.
+6. **Generate Test Summary** â€“ Summarizes updates.
+
+#### 4. Other
+- **Invalid Task Type** â€“ Handles incorrect requests.
+
+## Setup & Usage
+
+### Backend (Spring Boot)
+
+1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo.git
+   git clone <repo-url>
+   cd <project-folder>
    ```
-2. Install dependencies  
+2. Build and run the Spring Boot application:
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   mvn clean install  
+   mvn spring-boot:run  
    ```
-3. Run the project  
+3. The backend API will be available at `http://localhost:8080/`.
+
+### Frontend (React)
+
+1. Navigate to the frontend directory:
    ```sh
-   npm start  # or python app.py
+   cd frontend  
+   ```
+2. Install dependencies and start the React app:
+   ```sh
+   npm install  
+   npm start  
    ```
 
-## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+### Test Case Generation (Python LLM Script)
 
-## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+1. Install required dependencies:
+   ```sh
+   pip install -r requirements.txt  
+   ```
+2. Run the test case generator:
+   ```sh
+   python generate_tests.py --api-key <your-api-key>  
+   ```
+
+## Contributing
+
+Feel free to raise issues, fork the repository, and submit pull requests.
