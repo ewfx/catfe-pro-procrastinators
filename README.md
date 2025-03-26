@@ -79,9 +79,8 @@ The system operates in three modes:
    pip install -r requirements.txt  
    ```
 2. Run the test case generator:
-   ```sh
-   python generate_tests.py --api-key <your-api-key>  
-   ```
+   Run the jupyter notebook _SourceControlAndTestGenerationModel_Final.ipynb
+   And input the task `GENERATE_TESTS` or `UPDATE_TESTS`
 
 ## Contributing
 
